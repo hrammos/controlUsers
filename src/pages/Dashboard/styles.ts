@@ -13,20 +13,6 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    div.button {
-      margin-top: 34px;
-      height: 36px;
-      padding: 0 18px;
-      /* background-color: #7d40e7; */
-      border: 0;
-      border-radius: 4px;
-      color: #fff;
-      font-weight: bold;
-
-      display: flex;
-      align-items: center;
-    }
   }
 `;
 
@@ -87,6 +73,7 @@ export const RecordTable = styled.table`
       transition: 0.4s;
 
       svg {
+        align-self: center;
         color: #1282a2;
       }
 

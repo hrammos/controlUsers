@@ -1,20 +1,21 @@
 {
   "usuarios": [
     {
-      "id": 1,
       "name": "Administrador",
-      "cpf": "545.078.300-78",
       "email": "admin@gmail.com",
-      "password": "123456",
+      "cpf": "545.078.300-78",
+      "old_password": "",
+      "password": "",
+      "password_confirmation": "",
       "address": {
         "cep": "94814-330",
         "street": "Rua José Bonifácio",
+        "number": "186",
         "neighborhood": "Maringá",
-        "city": "Alvorada",
-        "number": "186"
-      }
+        "city": "Alvorada"
+      },
+      "id": 1
     },
-
     {
       "id": 2,
       "name": "Fulano",

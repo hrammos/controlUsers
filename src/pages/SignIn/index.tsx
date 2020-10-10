@@ -1,5 +1,5 @@
 import React, { useCallback, useRef, useState } from 'react';
-import { FiMail, FiLock } from 'react-icons/fi';
+import { GoMail, GoLock } from 'react-icons/go';
 import { useHistory } from 'react-router-dom';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
@@ -72,15 +72,16 @@ const SignIn: React.FC = () => {
     },
     [signIn, history],
   );
+
   return (
     <Container>
       <Content>
         <h1>controlUsers</h1>
 
         <Form ref={formRef} onSubmit={handleSubmit}>
-          <Input icon={FiMail} name="email" placeholder="E-mail" />
+          <Input icon={GoMail} name="email" placeholder="E-mail" />
           <Input
-            icon={FiLock}
+            icon={GoLock}
             name="password"
             type="password"
             placeholder="Senha"

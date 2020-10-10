@@ -1,9 +1,7 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
-import { FiTrash } from 'react-icons/fi';
-import { MdSearch } from 'react-icons/md';
-import { BiPencil } from 'react-icons/bi';
+import { BiPencil, BiSearch, BiTrash } from 'react-icons/bi';
 
 import Button from '../../components/Button';
 
@@ -21,8 +19,10 @@ const Dashboard: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [searchValue, setSearchValue] = useState('');
 
+  const history = useHistory();
+
   useEffect(() => {
-    async function loadUsers() {
+    async function loadUsers(): Promise<void> {
       const params = {} as FoodsParams;
       if (searchValue) {
         params.name_like = searchValue;
@@ -36,13 +36,20 @@ const Dashboard: React.FC = () => {
     loadUsers();
   }, [searchValue]);
 
+  const handleNavigate = useCallback(
+    (id: number) => {
+      history.push(`/user/${id}`);
+    },
+    [history],
+  );
+
   return (
     <Container>
       <header>
         <h1>Gerenciando usuários</h1>
         <div>
           <Search>
-            <MdSearch size={24} color="#999" />
+            <BiSearch size={20} color="#999" />
             <input
               onChange={e => setSearchValue(e.target.value)}
               type="text"
@@ -73,11 +80,11 @@ const Dashboard: React.FC = () => {
               <td>{user.email}</td>
               <td>{user.address.city}</td>
               <td>
-                <button type="button">
+                <button type="button" onClick={() => handleNavigate(user.id)}>
                   <BiPencil />
                 </button>
                 <button type="button">
-                  <FiTrash />
+                  <BiTrash />
                 </button>
               </td>
             </tr>
