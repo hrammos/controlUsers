@@ -1,0 +1,33 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "name": "Administrador",
+      "cpf": "545.078.300-78",
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "address": {
+        "cep": "94814-330",
+        "street": "Rua José Bonifácio",
+        "neighborhood": "Maringá",
+        "city": "Alvorada",
+        "number": "186"
+      }
+    },
+
+    {
+      "id": 2,
+      "name": "Fulano",
+      "cpf": "190.052.423-12",
+      "email": "fulano@gmail.com",
+      "password": "123456",
+      "address": {
+        "cep": "94814-330",
+        "street": "Rua José Bonifácio",
+        "neighborhood": "Maringá",
+        "city": "Alvorada",
+        "number": "186"
+      }
+    }
+  ]
+}
