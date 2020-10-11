@@ -64,23 +64,23 @@ export const Card = styled.div`
         margin-right: 16px;
       }
     }
-  }
 
-  span {
-    color: #de3b3b;
-    align-self: flex-start;
-    font-weight: bold;
-    margin: 0 0 10px;
+    svg {
+      margin-right: 8px;
+    }
   }
 `;
 
 export const CEPContainer = styled.div`
   display: flex;
   align-items: center;
-  max-width: 60%;
+
+  div {
+    max-width: 565px;
+  }
 
   div + button {
-    width: 120px;
+    width: 60px;
     margin-top: 0;
     margin-left: 8px;
     background: transparent;
@@ -116,6 +116,7 @@ export const CEPContainer = styled.div`
 export const StreetContainer = styled.div`
   display: flex;
   align-items: center;
+
   max-width: 100%;
   margin-top: 8px;
 
@@ -125,6 +126,27 @@ export const StreetContainer = styled.div`
 
     @media (max-width: 508px) {
       margin-left: 2px;
+    }
+  }
+
+  svg {
+    margin-right: 8px;
+  }
+
+  span {
+    background: #c40200;
+    color: #fff;
+
+    &::before {
+      border-color: #c40200 transparent;
+    }
+  }
+
+  @media (max-width: 597px) {
+    max-width: 50%;
+
+    svg {
+      margin-left: -30px;
     }
   }
 `;
@@ -142,6 +164,27 @@ export const CityContainer = styled.div`
 
     @media (max-width: 508px) {
       margin-left: 2px;
+    }
+  }
+
+  svg {
+    margin-right: 8px;
+  }
+
+  span {
+    background: #c40200;
+    color: #fff;
+
+    &::before {
+      border-color: #c40200 transparent;
+    }
+  }
+
+  @media (max-width: 597px) {
+    max-width: 50%;
+
+    svg {
+      margin-left: -30px;
     }
   }
 `;

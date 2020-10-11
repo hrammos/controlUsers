@@ -1,17 +1,17 @@
 import React, { useCallback, useRef, useState } from 'react';
-import { GoMail, GoLock } from 'react-icons/go';
+import { toast } from 'react-toastify';
 import { useHistory } from 'react-router-dom';
+import { GoMail, GoLock } from 'react-icons/go';
+import { FaUsers } from 'react-icons/fa';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
-import { toast } from 'react-toastify';
 import * as Yup from 'yup';
 
 import { useAuth } from '../../hooks/auth';
+import getValidationErrors from '../../utils/getValidationErrors';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
-
-import getValidationErrors from '../../utils/getValidationErrors';
 
 import { Container, Content } from './styles';
 
@@ -76,7 +76,10 @@ const SignIn: React.FC = () => {
   return (
     <Container>
       <Content>
-        <h1>controlUsers</h1>
+        <div>
+          <FaUsers size={28} />
+          <h1>controlUsers</h1>
+        </div>
 
         <Form ref={formRef} onSubmit={handleSubmit}>
           <Input icon={GoMail} name="email" placeholder="E-mail" />

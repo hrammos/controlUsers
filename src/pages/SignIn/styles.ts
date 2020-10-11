@@ -10,12 +10,20 @@ export const Container = styled.div`
   text-align: center;
   padding: 60px 0px;
 `;
+
 export const Content = styled.div`
-  h1 {
-    align-self: center;
-    margin-bottom: 40px;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg + h1 {
+      margin-left: 8px;
+    }
   }
+
   form {
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     padding: 0 30px;

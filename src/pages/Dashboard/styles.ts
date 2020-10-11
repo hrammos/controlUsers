@@ -14,6 +14,10 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
   }
+
+  button {
+    height: 36px;
+  }
 `;
 
 export const Search = styled.div`

@@ -1,34 +1,18 @@
 {
   "usuarios": [
     {
-      "name": "Administrador",
-      "email": "admin@gmail.com",
-      "cpf": "545.078.300-78",
-      "old_password": "",
-      "password": "",
-      "password_confirmation": "",
-      "address": {
-        "cep": "94814-330",
-        "street": "Rua José Bonifácio",
-        "number": "186",
-        "neighborhood": "Maringá",
-        "city": "Alvorada"
-      },
-      "id": 1
-    },
-    {
-      "id": 2,
-      "name": "Fulano",
-      "cpf": "190.052.423-12",
-      "email": "fulano@gmail.com",
+      "name": "Henrique Ramos",
+      "email": "henriqueramos0106@gmail.com",
+      "cpf": "849.098.200-78",
       "password": "123456",
       "address": {
         "cep": "94814-330",
         "street": "Rua José Bonifácio",
+        "number": "1555",
         "neighborhood": "Maringá",
-        "city": "Alvorada",
-        "number": "186"
-      }
+        "city": "Alvorada"
+      },
+      "id": 3
     }
   ]
 }
