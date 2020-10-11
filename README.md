@@ -1,4 +1,4 @@
-<h1 align="center">xxxx</h1>
+<h1 align="center">controlUsers</h1>
 <!-- <h3 align="center">⚡ A React project with Redux and Redux Saga ⚡</h3> -->
 <br />
 
@@ -20,10 +20,10 @@
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/hrammos/xxxx.git
+$ git clone https://github.com/hrammos/controlUsers.git
 
 # Go into the repository
-$ cd xxxx
+$ cd controlUsers
 
 # Install dependencies
 $ yarn install

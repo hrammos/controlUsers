@@ -1,18 +1,328 @@
 {
   "usuarios": [
     {
-      "name": "Henrique Ramos",
-      "email": "henriqueramos0106@gmail.com",
+      "name": "Danilo Levi Kevin Martins",
+      "email": "danilolevikevinmartins-74@emerson.com",
+      "cpf": "897.055.543-90",
+      "password": "123456",
+      "address": {
+        "cep": 66113000,
+        "street": "Avenida Senador Lemos",
+        "number": 230,
+        "neighborhood": "Telégrafo Sem Fio",
+        "city": "Belém"
+      },
+      "id": 1
+    },
+    {
+      "name": "Emily Lara Peixoto",
+      "email": "eemilylarapeixoto@graffiti.net",
+      "cpf": "001.810.212-34",
+      "password": "123456",
+      "address": {
+        "cep": 57040673,
+        "street": "Rua José Bonifácio",
+        "number": 818,
+        "neighborhood": "Jacintinho",
+        "city": "Maceió"
+      },
+      "id": 2
+    },
+    {
+      "name": "Luís Emanuel Anthony Aragão",
+      "email": "luiese@gmail.com",
+      "cpf": "974.449.869-24",
+      "password": "123456",
+      "address": {
+        "cep": 72007810,
+        "street": "Rua 12 Chácara 319",
+        "number": 467,
+        "neighborhood": "Setor Habitacional Vicente Pires",
+        "city": "Brasília"
+      },
+      "id": 3
+    },
+    {
+      "name": "Sara Isabelle Daniela Novaes",
+      "email": "saraisabelle123@gmail.com",
+      "cpf": "528.669.197-85",
+      "password": "123456",
+      "address": {
+        "cep": 69090815,
+        "street": "Travessa São Ricardo",
+        "number": 545,
+        "neighborhood": "Cidade Nova",
+        "city": "Manaus"
+      },
+      "id": 4
+    },
+    {
+      "name": "Usuario Admin",
+      "email": "admin@gmail.com",
+      "cpf": "950.880.106-99",
+      "password": "123456",
+      "address": {
+        "cep": 69087490,
+        "street": "Rua Rafael Siqueira",
+        "number": 309,
+        "neighborhood": "Tancredo Neves",
+        "city": "Maneus"
+      },
+      "id": 5
+    },
+    {
+      "name": "Joaquina",
+      "email": "joaquinasse@gmail.com",
+      "cpf": "901.245.482-45",
+      "password": "123456",
+      "address": {
+        "cep": 58083502,
+        "street": "Rua Cidade de Cajazeiras",
+        "number": 117,
+        "neighborhood": "Indústrias",
+        "city": "João Pessoa"
+      },
+      "id": 6
+    },
+    {
+      "name": "João Tomás da Costa",
+      "email": "joaotomas54@gmail.com",
+      "cpf": "131.844.383-09",
+      "password": "123456",
+      "address": {
+        "cep": 77423400,
+        "street": "Rua L",
+        "number": 590,
+        "neighborhood": "Waldir Lins II",
+        "city": "Gurupi"
+      },
+      "id": 7
+    },
+    {
+      "name": "Bianca Renata Gomes",
+      "email": "ooskeker@gmail.com",
+      "cpf": "907.069.512-04",
+      "password": "123456",
+      "address": {
+        "cep": 49044465,
+        "street": "Rua Quarenta",
+        "number": 984,
+        "neighborhood": "Santa Maria",
+        "city": "Aracaju"
+      },
+      "id": 8
+    },
+    {
+      "name": "Igor Calebe Assunção",
+      "email": "calebeigor@gmail.com",
+      "cpf": "124.823.258-54",
+      "password": "123456",
+      "address": {
+        "cep": 77819018,
+        "street": "Avenida Anhanguera",
+        "number": 570,
+        "neighborhood": "Setor Novo Horizonte",
+        "city": "Araguaína"
+      },
+      "id": 9
+    },
+    {
+      "name": "qualquer",
+      "email": "quallquer@gmail.com",
       "cpf": "849.098.200-78",
       "password": "123456",
       "address": {
-        "cep": "94814-330",
+        "cep": 94814330,
+        "street": "Rua José Bonifácio",
+        "number": 1555,
+        "neighborhood": "Maringá",
+        "city": "Alvorada"
+      },
+      "id": 10
+    },
+    {
+      "name": "Lorena Sophie Liz Cardoso",
+      "email": "aaanov546@gmail.com",
+      "cpf": "472.640.171-84",
+      "password": "123456",
+      "address": {
+        "cep": 57309823,
+        "street": "Rua Manoel André de Melo",
+        "number": 973,
+        "neighborhood": "Massaranduba",
+        "city": "Arapiraca"
+      },
+      "id": 11
+    },
+    {
+      "name": "blabla",
+      "email": "blabla@gmail.com.br",
+      "cpf": "849.444.7870-78",
+      "old_password": "",
+      "password": "",
+      "password_confirmation": "",
+      "address": {
+        "cep": "94814330",
         "street": "Rua José Bonifácio",
         "number": "1555",
         "neighborhood": "Maringá",
         "city": "Alvorada"
       },
-      "id": 3
+      "id": 12
+    },
+    {
+      "name": "ersaerf",
+      "email": "ramos0106@gmail.com.br",
+      "cpf": "849.098.200-78",
+      "password": "123456",
+      "address": {
+        "cep": 94814330,
+        "street": "Rua José Bonifácio",
+        "number": 1555,
+        "neighborhood": "Maringá",
+        "city": "Alvorada"
+      },
+      "id": 13
+    },
+    {
+      "name": "ee3ts",
+      "email": "teste3@gmail.com",
+      "cpf": "111.111.240-68",
+      "password": "123456",
+      "address": {
+        "cep": 94814330,
+        "street": "Rua José Bonifácio",
+        "number": 1555,
+        "neighborhood": "Maringá",
+        "city": "Alvorada"
+      },
+      "id": 14
+    },
+    {
+      "name": "tes22tes",
+      "email": "aaa3334@gmail.com",
+      "cpf": "111.111.240-68",
+      "password": "123456",
+      "address": {
+        "cep": 94814330,
+        "street": "Rua José Bonifácio",
+        "number": 1555,
+        "neighborhood": "Maringá",
+        "city": "Alvorada"
+      },
+      "id": 15
+    },
+    {
+      "name": "testes",
+      "email": "teste6@gmail.com",
+      "cpf": "111.111.240-68",
+      "password": "123456",
+      "address": {
+        "cep": 94814330,
+        "street": "Rua José Bonifácio",
+        "number": 1555,
+        "neighborhood": "Maringá",
+        "city": "Alvorada"
+      },
+      "id": 16
+    },
+    {
+      "name": "aaa",
+      "email": "teste6@gmail.com",
+      "cpf": "111.111.240-68",
+      "password": "123456",
+      "address": {
+        "cep": 94814330,
+        "street": "Rua José Bonifácio",
+        "number": 1555,
+        "neighborhood": "Maringá",
+        "city": "Alvorada"
+      },
+      "id": 18
+    },
+    {
+      "name": "ccc",
+      "email": "tsswet6@gsstl.com",
+      "cpf": "122.122.240-68",
+      "password": "123456",
+      "address": {
+        "cep": 94814330,
+        "street": "Rua José Bonifácio",
+        "number": 1555,
+        "neighborhood": "Maringá",
+        "city": "Alvorada"
+      },
+      "id": 19
+    },
+    {
+      "name": "ddsa",
+      "email": "sjaoisj@g2l.com",
+      "cpf": "122.122.240-68",
+      "password": "123456",
+      "address": {
+        "cep": 94814330,
+        "street": "Rua José Bonifácio",
+        "number": 1555,
+        "neighborhood": "Maringá",
+        "city": "Alvorada"
+      },
+      "id": 20
+    },
+    {
+      "name": "44ss",
+      "email": "tssdsdfgg6@gsstl.com.bb",
+      "cpf": "122.122.240-68",
+      "password": "123456",
+      "address": {
+        "cep": 94814330,
+        "street": "Rua José Bonifácio",
+        "number": 1555,
+        "neighborhood": "Maringá",
+        "city": "Alvorada"
+      },
+      "id": 21
+    },
+    {
+      "name": "Novo test",
+      "email": "qualquevia@gmail.conm",
+      "cpf": "555.556.669-68",
+      "password": "123456789",
+      "address": {
+        "cep": "94814-350",
+        "street": "Rua José Justo",
+        "number": "500",
+        "neighborhood": "Maringá",
+        "city": "Alvorada"
+      },
+      "id": 22
+    },
+    {
+      "name": "Novo cadastro editass",
+      "email": "usuario@gmail.com",
+      "cpf": "849.878.787-99",
+      "password": "54887",
+      "address": {
+        "cep": "94814-360",
+        "street": "Rua Júlio César",
+        "number": "555",
+        "neighborhood": "Formoza",
+        "city": "Alvorada"
+      },
+      "id": 23
+    },
+    {
+      "name": "Cadnee",
+      "email": "teste@gmail.com",
+      "cpf": "849.812.154-5",
+      "password": "123456789",
+      "address": {
+        "cep": "94814-330",
+        "street": "Rua José Bonifácio",
+        "number": "50",
+        "neighborhood": "Maringá",
+        "city": "Alvorada"
+      },
+      "id": 24
     }
   ]
 }

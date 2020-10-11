@@ -80,7 +80,7 @@ export const CEPContainer = styled.div`
   }
 
   div + button {
-    width: 60px;
+    width: 100px;
     margin-top: 0;
     margin-left: 8px;
     background: transparent;
@@ -92,10 +92,6 @@ export const CEPContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    svg {
-      color: #1282a2;
-    }
 
     &:hover {
       border: 2px solid #1282a2;

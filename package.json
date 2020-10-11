@@ -30,7 +30,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom-fourteen",
     "eject": "react-scripts eject",
     "server": "json-server --watch db.json --delay 2000 --port 5000"
   },
@@ -46,7 +46,6 @@
       "last 1 safari version"
     ]
   },
-
   "jest": {
     "collectCoverageFrom": [
       "src/pages/**/*.tsx",
@@ -56,6 +55,8 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^3.4.1",
+    "axios-mock-adapter": "^1.18.2",
     "@types/react-lottie": "^1.2.5",
     "@types/yup": "^0.29.7",
     "@typescript-eslint/eslint-plugin": "^4.4.0",

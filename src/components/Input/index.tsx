@@ -69,12 +69,6 @@ const Input: React.FC<InputProps> = ({
           </Error>
         )}
       </Container>
-      {/* {error && (
-        <ErrorContainer>
-          <FiAlertCircle color="#c40200" size={18} />
-          <span>{error}</span>
-        </ErrorContainer>
-      )} */}
     </>
   );
 };

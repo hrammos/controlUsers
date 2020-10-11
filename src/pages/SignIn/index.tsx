@@ -29,9 +29,9 @@ const SignIn: React.FC = () => {
 
   const handleSubmit = useCallback(
     async (data: SignInFormData) => {
-      try {
-        setLoading(true);
+      setLoading(true);
 
+      try {
         formRef.current?.setErrors({});
 
         const schema = Yup.object().shape({
@@ -55,8 +55,6 @@ const SignIn: React.FC = () => {
         });
 
         history.push('/dashboard');
-
-        setLoading(false);
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationErrors(err);
@@ -64,11 +62,12 @@ const SignIn: React.FC = () => {
           formRef.current?.setErrors(errors);
 
           toast.error('Credênciais inválidas.');
+        } else {
+          toast.error('Ocorreu um erro, tente novamente.');
         }
-
-        toast.error('Ocorreu um erro, tente novamente.');
-        setLoading(false);
       }
+
+      setLoading(false);
     },
     [signIn, history],
   );

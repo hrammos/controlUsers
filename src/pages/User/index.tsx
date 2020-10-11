@@ -86,95 +86,49 @@ const User: React.FC = () => {
 
       formRef.current?.setErrors({});
 
-      if (!isUpdate) {
-        try {
-          const schema = Yup.object().shape({
-            name: Yup.string().required('Nome obrigatório'),
-            email: Yup.string()
-              .required('E-mail obrigatório')
-              .email('Digite um e-mail válido'),
-            cpf: Yup.string().required('CPF obrigatório'),
-            password: Yup.string()
-              .min(5, 'Senha deve conter mais de 4 caracteres')
-              .required('Senha obrigatória'),
-            address: Yup.object().shape({
-              cep: Yup.string().required('CEP obrigatório'),
-              street: Yup.string().required('Rua obrigatória'),
-              number: Yup.string().required('Número obrigatório'),
-              neighborhood: Yup.string().required('Bairro obrigatório'),
-              city: Yup.string().required('Cidade obrigatório'),
-            }),
-          });
+      try {
+        const schema = Yup.object().shape({
+          name: Yup.string().required('Nome obrigatório'),
+          email: Yup.string()
+            .required('E-mail obrigatório')
+            .email('Digite um e-mail válido'),
+          cpf: Yup.string().required('CPF obrigatório'),
+          password: Yup.string()
+            .min(5, 'Senha deve conter mais de 4 caracteres')
+            .required('Senha obrigatória'),
+          address: Yup.object().shape({
+            cep: Yup.string().required('CEP obrigatório'),
+            street: Yup.string().required('Rua obrigatória'),
+            number: Yup.string().required('Número obrigatório'),
+            neighborhood: Yup.string().required('Bairro obrigatório'),
+            city: Yup.string().required('Cidade obrigatório'),
+          }),
+        });
 
-          await schema.validate(data, {
-            abortEarly: false,
-          });
+        await schema.validate(data, {
+          abortEarly: false,
+        });
 
+        if (!isUpdate) {
           await api.post('/usuarios', data);
 
           toast.success('Usuário cadastrado com sucesso.');
           history.push('/dashboard');
-        } catch (err) {
-          if (err instanceof Yup.ValidationError) {
-            const errors = getValidationErrors(err);
-
-            formRef.current?.setErrors(errors);
-
-            toast.error('Foram encontrados erros no formulário!');
-          } else {
-            toast.error('Não foi possível cadastrar usuário, tente novamente.');
-          }
-        }
-      } else {
-        try {
-          const schema = Yup.object().shape({
-            name: Yup.string().required('Nome obrigatório'),
-            email: Yup.string()
-              .required('E-mail obrigatório')
-              .email('Digite um e-mail válido'),
-            cpf: Yup.string().required('CPF obrigatório'),
-
-            old_password: Yup.string(),
-            password: Yup.string().when('old_password', {
-              is: val => !!val.length,
-              then: Yup.string()
-                .min(5, 'Senha deve conter mais de 4 caracteres')
-                .required('Senha obrigatória'),
-              otherwise: Yup.string(),
-            }),
-            password_confirmation: Yup.string()
-              .when('old_password', {
-                is: val => !!val.length,
-                then: Yup.string().required('Confirmação obrigatória'),
-                otherwise: Yup.string(),
-              })
-              .oneOf([Yup.ref('password'), undefined], 'Confirmação incorreta'),
-            address: Yup.object().shape({
-              cep: Yup.string().required('CEP obrigatório'),
-              street: Yup.string().required('Rua obrigatória'),
-              number: Yup.string().required('Número obrigatório'),
-              neighborhood: Yup.string().required('Bairro obrigatório'),
-              city: Yup.string().required('Cidade obrigatória'),
-            }),
-          });
-
-          await schema.validate(data, {
-            abortEarly: false,
-          });
-
+        } else {
           await api.put(`/usuarios/${id}`, data);
 
           toast.success('Usuário alterado com sucesso!');
-        } catch (err) {
-          if (err instanceof Yup.ValidationError) {
-            const errors = getValidationErrors(err);
+        }
 
-            formRef.current?.setErrors(errors);
+      } catch (err) {
+        if (err instanceof Yup.ValidationError) {
+          const errors = getValidationErrors(err);
 
-            toast.error('Foram encontrados erros no formulário.');
-          } else {
-            toast.error('Não foi possível alterar o usuário, tente novamente.');
-          }
+          formRef.current?.setErrors(errors);
+
+          toast.error('Foram encontrados erros no formulário!');
+        } else {
+          toast.error(`${isUpdate ? 'Não foi possível alterar o usuário, tente novamente.' : 'Não foi possível cadastrar o usuário, tente novamente'}`);
         }
       }
 
@@ -250,10 +204,7 @@ const User: React.FC = () => {
           <Form
             ref={formRef}
             onSubmit={handleSubmit}
-            initialData={{
-              ...user,
-              password: '',
-            }}
+            initialData={user}
           >
             {loading ? (
               <>
@@ -269,38 +220,14 @@ const User: React.FC = () => {
                   placeholder="CPF"
                   onChange={e => handleChangeCPF(e.target.value)}
                 />
-                {isUpdate ? (
-                  <>
-                    <Input
-                      containerStyle={{ marginTop: 24 }}
-                      name="old_password"
-                      icon={GoLock}
-                      type="password"
-                      placeholder="Senha atual"
-                    />
 
-                    <Input
-                      name="password"
-                      icon={GoLock}
-                      type="password"
-                      placeholder="Nova senha"
-                    />
+                <Input
+                  name="password"
+                  icon={GoLock}
+                  type="password"
+                  placeholder="Senha"
+                />
 
-                    <Input
-                      name="password_confirmation"
-                      icon={GoLock}
-                      type="password"
-                      placeholder="Confirmar senha"
-                    />
-                  </>
-                ) : (
-                  <Input
-                    name="password"
-                    icon={GoLock}
-                    type="password"
-                    placeholder="Senha"
-                  />
-                )}
 
                 <section>
                   <h3>
