@@ -4,8 +4,8 @@
 
 ## Screenshots
 <p align="center">
-  <img src=".github/dashboard.png" alt="Dashboard" width="760" height="400" />
   <img src=".github/signin.png" alt="SignIn" width="760" height="400" />
+  <img src=".github/dashboard.png" alt="Dashboard" width="760" height="400" />
   <img src=".github/user.png" alt="su" width="760" height="400" />
 </p>
 
