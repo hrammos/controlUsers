@@ -1,18 +1,19 @@
 <h1 align="center">controlUsers</h1>
-<!-- <h3 align="center">⚡ A React project with Redux and Redux Saga ⚡</h3> -->
+<h3 align="center">⚡ A CRUD of Users ⚡</h3>
 <br />
 
 ## Screenshots
 <p align="center">
-  <!-- <img src=".github/dashboard.png" alt="Dashboard" width="760" height="400" />
-  <img src=".github/cart.png" alt="Dashboard" width="760" height="400" /> -->
+  <img src=".github/dashboard.png" alt="Dashboard" width="760" height="400" />
+  <img src=".github/signin.png" alt="SignIn" width="760" height="400" />
+  <img src=".github/user.png" alt="su" width="760" height="400" />
 </p>
 
 
-## About
+<!-- ## About
 <p align="left">
-  <!-- This project was developed during the Rocketseat Bootcamp. Where I learned in practice Redux, Redux Saga and other technologies. -->
-</p>
+   This project was developed during the Rocketseat Bootcamp. Where I learned in practice Redux, Redux Saga and other technologies.
+</p> -->
 
 <br />
 

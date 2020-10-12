@@ -113,13 +113,13 @@ const User: React.FC = () => {
           await api.post('/usuarios', data);
 
           toast.success('Usuário cadastrado com sucesso.');
-          history.push('/dashboard');
         } else {
           await api.put(`/usuarios/${id}`, data);
 
           toast.success('Usuário alterado com sucesso!');
         }
 
+        history.push('/dashboard');
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationErrors(err);

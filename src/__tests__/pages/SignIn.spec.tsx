@@ -5,9 +5,6 @@ import SignIn from '../../pages/SignIn';
 
 const mockedHistoryPush = jest.fn();
 const mockedSignIn = jest.fn();
-const mockedToast = jest.fn();
-
-jest.useFakeTimers();
 
 jest.mock('react-router-dom', () => {
   return {
@@ -20,7 +17,9 @@ jest.mock('react-router-dom', () => {
 
 jest.mock('react-toastify', () => {
   return {
-    toast: mockedToast,
+    toast: {
+      error: jest.fn(),
+    },
   };
 });
 
@@ -51,6 +50,45 @@ describe('SignIn Page', () => {
 
     await wait(
       () => expect(mockedHistoryPush).toHaveBeenCalledWith('/dashboard'),
+      { timeout: 2000 },
+    );
+  });
+
+  it('should not be able to sign in with invalid credentials', async () => {
+    const { getByPlaceholderText, getByText } = render(<SignIn />);
+
+    const emailField = getByPlaceholderText('E-mail');
+    const passwordField = getByPlaceholderText('Senha');
+    const buttonElement = getByText('Entrar');
+
+    fireEvent.change(emailField, { target: { value: 'not-valid-email' } });
+    fireEvent.change(passwordField, { target: { value: '11223' } });
+
+    fireEvent.click(buttonElement);
+
+    await wait(() => expect(mockedHistoryPush).not.toHaveBeenCalled(), {
+      timeout: 2000,
+    });
+  });
+
+  it('should dislpay an error if login fails', async () => {
+    mockedSignIn.mockImplementation(() => {
+      throw new Error();
+    });
+
+    const { getByPlaceholderText, getByText } = render(<SignIn />);
+
+    const emailField = getByPlaceholderText('E-mail');
+    const passwordField = getByPlaceholderText('Senha');
+    const buttonElement = getByText('Entrar');
+
+    fireEvent.change(emailField, { target: { value: 'johndoe@example.com' } });
+    fireEvent.change(passwordField, { target: { value: '123456' } });
+
+    fireEvent.click(buttonElement);
+
+    await wait(
+      () => expect(mockedHistoryPush).not.toHaveBeenCalledWith('/dashboard'),
       { timeout: 2000 },
     );
   });
